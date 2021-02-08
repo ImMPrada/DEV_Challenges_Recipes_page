@@ -4,12 +4,13 @@ $gray-1: #333333;
 $gray-2: #4F4F4F;
 $gray-3: #C4C4C4;
 $gray-4: #BDBDBD;
+$gray-5: #FAFAFA;
 $orange: #F2994A;
 
 $PlayfairDisplay: 'Playfair Display', 'serif';
 $Montserrat: 'Montserrat', 'sans-serif';
 
-@mixin text($size: 14px, $height: 1.78, $weight: normal, $spacing: 1, $style: normal, $color: $gray-1, $type: $Montserrat){
+@mixin text($size: 14px, $height: 1.78, $weight: normal, $spacing: normal, $style: normal, $color: $gray-1, $type: $Montserrat){
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
