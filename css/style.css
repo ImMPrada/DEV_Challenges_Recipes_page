@@ -99,3 +99,37 @@ body {
   #recipe-main .hero-img img {
     border-radius: 12px;
     width: 100%; }
+
+.the-recipe-info-card {
+  font-size: 10px;
+  line-height: 1.22;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-style: normal;
+  color: #333333;
+  font-family: "Montserrat", "sans-serif";
+  margin-top: 24px; }
+  .the-recipe-info-card-number-of .text-2 {
+    color: #F2994A; }
+  .the-recipe-info-card-little-data {
+    display: flex;
+    margin-top: 20px; }
+  .the-recipe-info-card-data-item {
+    display: grid;
+    grid-template-columns: 17px auto;
+    margin: 0 42px 0 0; }
+    .the-recipe-info-card-data-item-img {
+      padding-top: .72px; }
+      .the-recipe-info-card-data-item-img svg {
+        width: 100%; }
+        .the-recipe-info-card-data-item-img svg .coloreable {
+          fill: #4F4F4F; }
+    .the-recipe-info-card-data-item-text .text-1 {
+      margin-left: 5px;
+      font-size: 8px;
+      font-weight: 700;
+      color: #BDBDBD; }
+    .the-recipe-info-card-data-item-text .text-2 {
+      margin-left: 5px; }
+  .the-recipe-info-card-number-of svg .coloreable {
+    fill: #F2994A; }
