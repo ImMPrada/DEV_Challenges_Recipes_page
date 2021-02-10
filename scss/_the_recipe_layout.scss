@@ -1,1 +1,24 @@
-// layout
+.the-recipe {
+  
+  @media (min-width: $breakpt) {
+    display: grid;
+    grid-template-columns: auto 216px;
+    margin-top: 40px;
+    
+  }
+  
+  &-info-card-big {
+    
+    @media (min-width: $breakpt) {
+      grid-column: 2 /2;
+    }
+  }
+  
+  &-content {
+    
+    @media (min-width: $breakpt) {
+      grid-column: 1/1;
+      grid-row: 1/1;
+    }
+  }
+}
