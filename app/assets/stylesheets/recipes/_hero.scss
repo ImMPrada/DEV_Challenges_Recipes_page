@@ -1,6 +1,6 @@
 // mixin text($size: 14px, $height: 1.78, $weight: normal, $spacing: 1, $style: normal, $color: $gray-1, $type: $Montserrat)
 
-#recipe-main .hero{
+.hero{
   &-text {
     &-title {
       @include text($size: 24px, $height: 1.33, $type: $PlayfairDisplay, $weight: 700, $color: black);

@@ -1,2 +1,5 @@
+- content_for :css
+  = stylesheet_link_tag 'recipes', media: 'all', 'data-turbolinks-track': 'reload'
+
 h1 NEW RECIPE
 = react_component("HelloWorld", { greeting: "Hello from react-rails." })
