@@ -1,5 +1,5 @@
 - content_for :css
-  = stylesheet_link_tag 'recipes', media: 'all', 'data-turbolinks-track': 'reload'
+  = stylesheet_link_tag :recipes, media: 'all', 'data-turbolinks-track': 'reload'
+- content_for :main_class, 'new-recipe-container'
 
-h1 NEW RECIPE
-= react_component("HelloWorld", { greeting: "Hello from react-rails." })
+= react_component("recipes/NewRecipe")

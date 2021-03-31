@@ -15,5 +15,5 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     main.layout
-      .content-card
+      div class="content-card #{content_for?(:main_class) ? yield(:main_class) : ''}"
         = yield

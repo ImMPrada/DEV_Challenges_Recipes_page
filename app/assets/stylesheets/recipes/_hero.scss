@@ -4,6 +4,10 @@
   &-text {
     &-title {
       @include text($size: 24px, $height: 1.33, $type: $PlayfairDisplay, $weight: 700, $color: black);
+
+      @media (min-width: $breakpt) {
+        font-size: 48px;
+      }
     }
 
     &-paragraph {
@@ -21,10 +25,8 @@
         @media (min-width:$breakpt){
           max-width: 592px;
         }
-        
-        p {
-          @include text($height: 1.22, $weight: 500, $style: italic, $color:$gray-2);
-        }
+
+        @include text($height: 1.22, $weight: 500, $style: italic, $color:$gray-2);
       }
     }
   }
