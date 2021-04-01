@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-$gray-1: #333333;
-$gray-2: #4F4F4F;
-$gray-3: #C4C4C4;
-$gray-4: #BDBDBD;
-$gray-5: #FAFAFA;
-$orange: #F2994A;
-
 $PlayfairDisplay: 'Playfair Display', 'serif';
 $Montserrat: 'Montserrat', 'sans-serif';
 
@@ -19,5 +12,3 @@ $Montserrat: 'Montserrat', 'sans-serif';
   color: $color;
   font-family: $type;
 }
-
-$breakpt: 993px;

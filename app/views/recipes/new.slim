@@ -1,0 +1,5 @@
+- content_for :css
+  = stylesheet_link_tag :recipes, media: 'all', 'data-turbolinks-track': 'reload'
+- content_for :main_class, 'new-recipe-container'
+
+= react_component("recipes/NewRecipe")

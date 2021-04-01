@@ -1,0 +1,16 @@
+@import '../global/';
+
+.input-field-component {
+  border: 1px solid $transparent;
+  resize: none;
+  background: none;
+  border-radius: 8px;
+  @include text;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  transition: border-color 0.1s;
+
+  &:hover {
+    border-color: $gray-1;
+  }
+}

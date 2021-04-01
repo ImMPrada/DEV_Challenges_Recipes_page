@@ -1,0 +1,6 @@
+.recipe-description-component {
+  @include text($height: 1.22, $weight: 500, $style: italic, $color:$gray-2);
+  padding: 0 10px;
+  width: 100%;
+  min-height: 55px;
+}
