@@ -1,5 +1,5 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-process.env.REACT_APP_ACTIVE_STORAGE_PATH = process.env.NODE_ENV || '/rails/active_storage/direct_uploads';
+process.env.DIRECT_UPLOADS_PATH = process.env.DIRECT_UPLOADS_PATH || '/rails/active_storage/direct_uploads';
 
 const environment = require('./environment');
 
