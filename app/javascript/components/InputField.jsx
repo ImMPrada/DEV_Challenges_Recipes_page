@@ -14,8 +14,10 @@ const InputField = ({
         type={type}
         name={name}
         value={value}
+        placeholder={placeholder}
         className={`input-field-component ${className}`}
         rows={rows}
+        onFocus={onInputClick}
         onClick={onInputClick}
         onChange={onInputChange}
       />
