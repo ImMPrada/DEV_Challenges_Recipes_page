@@ -4,36 +4,50 @@ import { DirectUpload } from '@rails/activestorage';
 const useDirectUpload = () => {
   const [errors, setErrors] = useState(null);
   const [blob, setBlob] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [fileSrc, setFileSrc] = useState(null);
 
   const { DIRECT_UPLOADS_PATH } = process.env;
 
   const uploadFile = async (file) => {
-    const upload = await new DirectUpload(file, DIRECT_UPLOADS_PATH || '');
+    setLoading(true);
+    try {
+      const upload = await new DirectUpload(file, REACT_APP_DIRECT_UPLOADS_URL || '');
 
-    await upload.create((error, blob) => {
-      if (error) setErrors(error);
-      else setBlob(blob);
-    });
+      await upload.create((error, blob) => {
+        if (error) setErrors(error);
+        else setBlob(blob);
 
-    return ({ blob, errors });
+        setLoading(false);
+      });
+
+      return ({ blob, errors });
+    } catch (error) {
+      setErrors(error);
+      setLoading(false);
+    }
   };
 
   const readFileAsUrl = (file) => {
     const reader = new FileReader();
-    reader.onload = (event) => setFileSrc(event.target.result);
+    reader.onload = (event) => {
+      if (!event.target) return;
+      setFileSrc(`${event.target.result}`)
+    };
+
     reader.readAsDataURL(file);
   };
 
-  const onFileSelect = (event) => {
-    const { files } = event.target;
+  const onFileSelect = async (event) => {
+    const { files } = event.currentTarget;
     if (!files || !files.length) return;
 
-    uploadFile(files[0]);
+    await uploadFile(files[0]);
     readFileAsUrl(files[0]);
   };
 
   return {
+    loading,
     errors,
     blob,
     fileSrc,
