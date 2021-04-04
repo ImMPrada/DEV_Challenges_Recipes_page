@@ -1,11 +1,14 @@
 @import '../global/';
 
-.drop-image-input-component {
+.drop-file-input-component {
   height: 470px;
   position: relative;
   transition: border-color 0.1s;
   border: 1px dashed $transparent;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     border-color: $gray-1;

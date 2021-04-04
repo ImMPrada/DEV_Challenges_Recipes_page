@@ -12,7 +12,7 @@ const useDirectUpload = () => {
   const uploadFile = async (file) => {
     setLoading(true);
     try {
-      const upload = await new DirectUpload(file, REACT_APP_DIRECT_UPLOADS_URL || '');
+      const upload = await new DirectUpload(file, DIRECT_UPLOADS_PATH || '');
 
       await upload.create((error, blob) => {
         if (error) setErrors(error);
