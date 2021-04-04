@@ -9,19 +9,17 @@ const InputField = ({
   const { value, onInputClick, onInputChange } = useInputValue({ initialValue: placeholder });
 
   return (
-    <div>
-      <Element
-        type={type}
-        name={name}
-        value={value}
-        placeholder={placeholder}
-        className={`input-field-component ${className}`}
-        rows={rows}
-        onFocus={onInputClick}
-        onClick={onInputClick}
-        onChange={onInputChange}
-      />
-    </div>
+    <Element
+      type={type}
+      name={name}
+      value={value}
+      placeholder={placeholder}
+      className={`input-field-component ${className}`}
+      rows={rows}
+      onFocus={onInputClick}
+      onClick={onInputClick}
+      onChange={onInputChange}
+    />
   );
 };
 

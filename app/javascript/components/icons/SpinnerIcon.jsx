@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingSpinner = () => (
+const SpinnerIcon = () => (
   <div className="lds-ellipsis">
     <div />
     <div />
@@ -9,4 +9,4 @@ const LoadingSpinner = () => (
   </div>
 );
 
-export default LoadingSpinner;
+export default SpinnerIcon;

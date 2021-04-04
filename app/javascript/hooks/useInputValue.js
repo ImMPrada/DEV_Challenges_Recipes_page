@@ -4,7 +4,7 @@ const useInputValue = ({ initialValue }) => {
   const [value, setValue] = useState(initialValue);
   const [startedEdit, setStartedEdit] = useState(false);
 
-  const onInputClick = (event) => { 
+  const onInputClick = (event) => {
     if (startedEdit) return;
 
     event.target.select();
@@ -13,6 +13,7 @@ const useInputValue = ({ initialValue }) => {
 
   const onInputChange = (event) => {
     if (!startedEdit) setStartedEdit(true);
+
     setValue(event.target.value);
   };
 

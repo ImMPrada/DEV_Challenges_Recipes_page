@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LoadingSpinner from './LoadingSpinner';
+import SpinnerIcon from './icons/SpinnerIcon';
 import useDirectUpload from '../hooks/useDirectUpload';
 
 const DropFileInput = ({ name, contentType, placeholder }) => {
@@ -12,7 +12,7 @@ const DropFileInput = ({ name, contentType, placeholder }) => {
   if (loading) {
     return (
       <div className="drop-file-input-component">
-        <LoadingSpinner />
+        <SpinnerIcon />
       </div>
     )
   }
