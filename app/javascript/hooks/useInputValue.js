@@ -1,20 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const useInputValue = ({ initialValue }) => {
   const [value, setValue] = useState(initialValue);
   const [startedEdit, setStartedEdit] = useState(false);
 
-  const onInputClick = () => { setStartedEdit(true); };
-  const onInputChange = (event) => {
-    if (!startedEdit) setStartedEdit(true);
-    setValue(event.target.value);
+  const onInputClick = (event) => {
+    if (startedEdit) return;
+
+    event.target.select();
+    setStartedEdit(true);
   };
 
-  useEffect(() => {
-    if (startedEdit) {
-      setValue('');
-    }
-  }, [startedEdit]);
+  const onInputChange = (event) => {
+    if (!startedEdit) setStartedEdit(true);
+
+    setValue(event.target.value);
+  };
 
   return { value, onInputClick, onInputChange };
 };

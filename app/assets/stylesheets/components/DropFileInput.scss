@@ -1,0 +1,61 @@
+@import '../global/';
+
+.drop-file-input-component {
+  height: 470px;
+  position: relative;
+  transition: border-color 0.1s;
+  border: 1px dashed $transparent;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: $gray-1;
+
+    input[type=file] {
+      cursor: pointer;
+    }
+
+    .instruction-text {
+      opacity: 0.8;
+    }
+  }
+
+  input[type=file] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .instruction-text {
+    @include text($size: 20px, $weight: 700);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray-4;
+    opacity: 0.2;
+    transition: opacity 0.1s;
+    border-radius: 8px;
+  }
+}
