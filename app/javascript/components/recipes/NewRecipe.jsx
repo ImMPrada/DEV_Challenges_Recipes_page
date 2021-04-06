@@ -4,6 +4,7 @@ import RecipeTitle from './RecipeTitle';
 import RecipeDescription from './RecipeDescription';
 import RecipeImage from './RecipeImage';
 import RecipeDetailsCard from './RecipeDetailsCard';
+import RecipeIngredients from './RecipeIngredients';
 
 const NewRecipe = () => (
   <NewRecipeForm>
@@ -20,19 +21,7 @@ const NewRecipe = () => (
         <RecipeDetailsCard />
       </div>
       <div className="the-recipe-content">
-        <div className="the-recipe-content-ingredients">
-          <h2>Ingredients</h2>
-          <div className="ingredient">
-            <div className="ingredient-mark" />
-            <p className="ingredient-text">
-              1 and 1/2 cups
-              {' '}
-              <strong>graham cracker crumbs</strong>
-              {' '}
-              (about 10 full sheet graham crackers)
-            </p>
-          </div>
-        </div>
+        <RecipeIngredients />
         <div className="the-recipe-content-instructions" />
       </div>
     </div>
