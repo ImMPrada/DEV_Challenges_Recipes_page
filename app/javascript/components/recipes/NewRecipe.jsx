@@ -21,18 +21,16 @@ const NewRecipe = () => (
       </div>
       <div className="the-recipe-content">
         <div className="the-recipe-content-ingredients">
-          <h3>Ingredients</h3>
-          <div className="the-recipe-content-ingredients-item">
-            <h2 className="the-item">
-              Graham Cracker Crust
-            </h2>
-
-            <div className="checkbox">
-              <div className="checkbox-text">
-                <p>1 and 1/2 cups (150g) graham cracker crumbs (about 10 full sheet graham crackers)</p>
-              </div>
-            </div>
-
+          <h2>Ingredients</h2>
+          <div className="ingredient">
+            <div className="ingredient-mark" />
+            <p className="ingredient-text">
+              1 and 1/2 cups
+              {' '}
+              <strong>graham cracker crumbs</strong>
+              {' '}
+              (about 10 full sheet graham crackers)
+            </p>
           </div>
         </div>
         <div className="the-recipe-content-instructions" />
