@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import CheckIcon from './icons/CheckIcon';
+import CrossSignIcon from './icons/CrossSignIcon';
 
 const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
   const [collection, setCollection] = useState([]);
@@ -21,25 +23,25 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
   };
 
   return (
-    <div>
-      <div className="collection-list">
+    <div className="collection-group-component">
+      <div className="collection-list-wrapper">
         { collection.map((item, index) => (
           <>
             <CollectionItem item={item} />
-            <button type="button" onClick={() => removeItemAt(index)}>
-              Remove
+            <button type="button" className="action-button" onClick={() => removeItemAt(index)}>
+              <CrossSignIcon />
             </button>
           </>
         ))}
       </div>
 
-      <div className="collection-maker">
+      <div className="collection-maker-wrapper">
         <CollectionMaker
           item={newItem}
           onChange={(changedItem) => setNewItem(changedItem)}
         />
-        <button type="button" onClick={addItemToCollection}>
-          Add
+        <button type="button" className="action-button" onClick={addItemToCollection}>
+          <CheckIcon />
         </button>
       </div>
     </div>
