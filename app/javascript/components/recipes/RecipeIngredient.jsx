@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const RecipeIngredient = ({ item }) => (
   <div className="ingredient">
@@ -13,5 +14,11 @@ const RecipeIngredient = ({ item }) => (
     </p>
   </div>
 );
+
+RecipeIngredient.propTypes = {
+  item: PropTypes.shape({
+    text: PropTypes.string,
+  }).isRequired,
+};
 
 export default RecipeIngredient;

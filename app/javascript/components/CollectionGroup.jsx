@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import CheckIcon from './icons/CheckIcon';
 import CrossSignIcon from './icons/CrossSignIcon';
 
@@ -46,6 +47,11 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
       </div>
     </div>
   );
+};
+
+CollectionGroup.propTypes = {
+  CollectionItem: PropTypes.element.isRequired,
+  CollectionMaker: PropTypes.element.isRequired,
 };
 
 export default CollectionGroup;
