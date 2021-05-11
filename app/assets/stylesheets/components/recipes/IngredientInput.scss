@@ -1,0 +1,22 @@
+.ingredient-input-component {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+
+  .ingredient-pack-amount {
+    width: 80px;
+  }
+
+  .ingredient-units {
+    width: 80px;
+  }
+
+  .ingredient-name {
+    font-weight: 700;
+    width: 100px;
+  }
+
+  .ingredient-pack-notes {
+    flex: 1 1;
+  }
+}

@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import useInputValue from '../hooks/useInputValue';
 
 const InputField = ({
-  type, name, placeholder, as, className, rows,
+  type, name, placeholder, as, className, rows, onChange,
 }) => {
   const Element = as;
   const { value, onInputClick, onInputChange } = useInputValue({ initialValue: placeholder });
+  const handleChange = (event) => {
+    onInputChange(event);
+    onChange(event);
+  };
 
   return (
     <Element
@@ -18,7 +22,7 @@ const InputField = ({
       rows={rows}
       onFocus={onInputClick}
       onClick={onInputClick}
-      onChange={onInputChange}
+      onChange={handleChange}
     />
   );
 };
@@ -30,6 +34,7 @@ InputField.propTypes = {
   as: PropTypes.oneOf(['input', 'textarea']),
   className: PropTypes.string,
   rows: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 InputField.defaultProps = {
@@ -37,6 +42,7 @@ InputField.defaultProps = {
   as: 'input',
   className: '',
   rows: '1',
+  onChange: () => {},
 };
 
 export default InputField;

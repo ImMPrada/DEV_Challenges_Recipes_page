@@ -38,7 +38,6 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
 
       <div className="collection-maker-wrapper">
         <CollectionMaker
-          item={newItem}
           onChange={(changedItem) => setNewItem(changedItem)}
         />
         <button type="button" className="action-button" onClick={addItemToCollection}>
