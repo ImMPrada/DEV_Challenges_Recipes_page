@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import InputField from '../InputField';
+import IngredientListPoint from './IngredientListPoint';
 
 const IngredientInput = ({ onChange }) => {
   const [amount, setAmount] = useState('');
@@ -14,6 +15,7 @@ const IngredientInput = ({ onChange }) => {
 
   return (
     <div className="ingredient-input-component">
+      <IngredientListPoint />
       <InputField
         className="ingredient-pack-amount"
         type="text"

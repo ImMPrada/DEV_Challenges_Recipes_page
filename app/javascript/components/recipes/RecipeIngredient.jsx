@@ -1,23 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import IngredientListPoint from './IngredientListPoint';
 
 const RecipeIngredient = ({ item }) => (
-  <div className="ingredient">
-    <div className="ingredient-mark" />
+  <div className="recipe-ingredient-component ingredient">
+    <IngredientListPoint />
     <p className="ingredient-text">
-      { item.text }
-      {/* 1 and 1/2 cups
+      { item.amount }
       {' '}
-      <strong>graham cracker crumbs</strong>
+      { item.units }
       {' '}
-      (about 10 full sheet graham crackers) */}
+      <strong>
+        { item.name }
+      </strong>
+      {' '}
+      { item.notes }
     </p>
   </div>
 );
 
 RecipeIngredient.propTypes = {
   item: PropTypes.shape({
-    text: PropTypes.string,
+    amount: PropTypes.string,
+    units: PropTypes.string,
+    name: PropTypes.string,
+    notes: PropTypes.string,
   }).isRequired,
 };
 

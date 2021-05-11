@@ -25,10 +25,15 @@
   .collection-maker-wrapper {
     display: flex;
     align-items: center;
+    border-top: 1px solid $gray-4;
   }
 
   .collection-list-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
+    .collection-list-item {
+      display: flex;
+    }
   }
 }

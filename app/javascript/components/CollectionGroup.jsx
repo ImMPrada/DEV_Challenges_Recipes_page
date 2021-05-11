@@ -12,8 +12,6 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
       ...collection,
       newItem,
     ]);
-
-    setNewItem({});
   };
 
   const removeItemAt = (index) => {
@@ -27,12 +25,12 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
     <div className="collection-group-component">
       <div className="collection-list-wrapper">
         { collection.map((item, index) => (
-          <>
+          <div className="collection-list-item">
             <CollectionItem item={item} />
             <button type="button" className="action-button" onClick={() => removeItemAt(index)}>
               <CrossSignIcon />
             </button>
-          </>
+          </div>
         ))}
       </div>
 
