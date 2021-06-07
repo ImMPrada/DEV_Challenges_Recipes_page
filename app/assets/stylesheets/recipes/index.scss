@@ -1,9 +1,14 @@
 @import '../global/';
 @import '../components/InputField';
 @import '../components/DropFileInput';
+@import '../components/CollectionGroup';
 @import '../components/icons/SpinnerIcon';
 @import '../components/recipes/RecipeDescription';
+@import '../components/recipes/IngredientInput';
+@import '../components/recipes/IngredientListPoint';
+@import '../components/recipes/RecipeIngredient';
 
 @import 'hero';
 @import 'the_recipe_layout';
 @import 'the_recipe_card';
+@import 'the_recipe_ingredients';

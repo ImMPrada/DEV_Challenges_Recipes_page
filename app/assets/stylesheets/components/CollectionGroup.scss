@@ -1,0 +1,39 @@
+@import '../global';
+
+.collection-group-component {
+  .action-button {
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    padding: 0 4px;
+    background-color: $gray-5;
+    transition: background-color 0.1s;
+    border: none;
+    border-radius: 6px;
+    margin-left: 20px;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    svg {
+      width: 100%;
+      fill: $gray-1;
+    }
+  }
+
+  .collection-maker-wrapper {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $gray-4;
+  }
+
+  .collection-list-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .collection-list-item {
+      display: flex;
+    }
+  }
+}

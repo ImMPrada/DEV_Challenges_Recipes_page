@@ -1,0 +1,56 @@
+.the-recipe-content-ingredients {
+  margin-top: 30px;
+
+  @media (min-width: $breakpt) {
+    margin-top: 0;
+    margin-right: 155px;
+  }
+
+  h2 {
+    @include text($type: $PlayfairDisplay, $weight: 700, $size: 18px, $height: 1.33);
+    margin-bottom: 24px;
+
+    @media (min-width: $breakpt) {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .ingredient {
+    display: flex;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-mark {
+      margin-right: 8px;
+      width: 21px;
+      height: 21px;
+      border: 1px solid $gray-6;
+      border-radius: 4px;
+      transition: background-color 0.1s;
+
+      @media (min-width: $breakpt) {
+        margin-right: 17px;
+      }
+
+      &:hover {
+        background-color: $gray-3;
+      }
+    }
+
+    &-text {
+      @include text;
+
+      @media (min-width: $breakpt) {
+        @include text($height: 1.56, $size: 16px);
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
