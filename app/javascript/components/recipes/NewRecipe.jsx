@@ -5,6 +5,7 @@ import RecipeDescription from './RecipeDescription';
 import RecipeImage from './RecipeImage';
 import RecipeDetailsCard from './RecipeDetailsCard';
 import RecipeIngredients from './RecipeIngredients';
+import RecipeInstructions from './RecipeInstructions';
 
 const NewRecipe = () => (
   <NewRecipeForm>
@@ -22,7 +23,7 @@ const NewRecipe = () => (
       </div>
       <div className="the-recipe-content">
         <RecipeIngredients />
-        <div className="the-recipe-content-instructions" />
+        <RecipeInstructions />
       </div>
     </div>
   </NewRecipeForm>
