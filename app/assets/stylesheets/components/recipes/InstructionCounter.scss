@@ -1,0 +1,10 @@
+@import '../../global';
+
+.instruction-counter-component {
+  @include text($size: 18px, $height: 36px, $color: $white, $weight: 700);
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  background-color: $orange;
+  border-radius: 6px;
+}

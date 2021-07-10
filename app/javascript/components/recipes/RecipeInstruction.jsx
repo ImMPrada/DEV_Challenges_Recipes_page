@@ -5,7 +5,7 @@ import InstructionCounter from './InstructionCounter';
 const RecipeInstruction = ({ item }) => (
   <div className="recipe-instruction-component instruction">
     <InstructionCounter step={item.step} />
-    <p className="instruction-text">
+    <p className="instruction-content">
       { item.content }
     </p>
   </div>

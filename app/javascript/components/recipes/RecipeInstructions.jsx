@@ -4,7 +4,7 @@ import RecipeInstruction from './RecipeInstruction';
 import InstructionInput from './InstructionInput';
 
 const RecipeInstructions = () => (
-  <div className="the-recipe-content-instructions">
+  <div className="recipe-instructions-component the-recipe-content-instructions">
     <h2>Instructions</h2>
 
     <CollectionGroup
