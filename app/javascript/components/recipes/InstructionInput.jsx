@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import InputField from '../InputField';
 import InstructionCounter from './InstructionCounter';
 
-const InstructionInput = ({ onChange }) => {
-  const [step, setStep] = useState(1);
+const InstructionInput = ({ onChange, index }) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    onChange({ content, step });
-  }, [content, step]);
+    onChange({ content });
+  }, [content]);
 
   return (
     <div className="instruction-input-component">
-      <InstructionCounter step={step} />
+      <InstructionCounter step={index + 1} />
       <InputField
         className="instruction-content"
         as="textarea"
@@ -27,11 +26,8 @@ const InstructionInput = ({ onChange }) => {
 };
 
 InstructionInput.propTypes = {
-  onChange: PropTypes.func,
-};
-
-InstructionInput.defaultProps = {
-  onChange: () => {},
+  onChange: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default InstructionInput;
