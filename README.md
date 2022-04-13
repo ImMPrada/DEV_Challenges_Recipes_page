@@ -55,9 +55,7 @@ Miguel Prada
 Miguel Prada
 
 - GitHub: @ImMPrada
-- LinkedIn: /in/miguel-prada-15b7bb224/
-- <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="immprada" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/immprada?trk=profile-badge">miguel prada</a></div>
-              
+- LinkedIn: /in/immprada/
 - Contributing
 - Contributions, issues, and feature requests are welcome!
 
