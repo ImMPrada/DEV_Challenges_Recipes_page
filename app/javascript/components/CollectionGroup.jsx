@@ -26,7 +26,7 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
       <div className="collection-list-wrapper">
         { collection.map((item, index) => (
           <div className="collection-list-item">
-            <CollectionItem item={item} />
+            <CollectionItem item={item} index={index} />
             <button type="button" className="action-button" onClick={() => removeItemAt(index)}>
               <CrossSignIcon />
             </button>
@@ -37,6 +37,7 @@ const CollectionGroup = ({ CollectionMaker, CollectionItem }) => {
       <div className="collection-maker-wrapper">
         <CollectionMaker
           onChange={(changedItem) => setNewItem(changedItem)}
+          index={collection.length}
         />
         <button type="button" className="action-button" onClick={addItemToCollection}>
           <CheckIcon />

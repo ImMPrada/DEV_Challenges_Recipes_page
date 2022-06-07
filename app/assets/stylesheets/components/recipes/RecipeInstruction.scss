@@ -1,0 +1,17 @@
+@import '../../global';
+
+.recipe-instruction-component {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+
+  .instruction-content {
+    @include text;
+    width: 100%;
+
+    @media (min-width: $breakpt) {
+      @include text($size: 16px, $height: 1.62);
+    }
+  }
+}

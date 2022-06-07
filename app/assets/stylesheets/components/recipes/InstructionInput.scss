@@ -1,0 +1,18 @@
+@import '../../global';
+
+.instruction-input-component {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+
+  .instruction-content {
+    height: 190px;
+    width: 100%;
+    max-width: 530px;
+
+    @media (min-width: $breakpt) {
+      @include text($size: 16px, $height: 1.62);
+      max-width: 100%;
+    }
+  }
+}
